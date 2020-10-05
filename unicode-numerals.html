@@ -80,17 +80,6 @@ and numeric value equal to 0.</p>
 (numeral-&gt;number "๓๕๕/๑๑๓" #\xE50) =&gt; 355/113   ; THAI DIGIT ZERO
 </code></pre>
     
-<p>Note: Numbers composed from Western Arabic digits
-  (<code>#x660</code> to <code>#x669</code> inclusive)
-  are represented differently from other decimal numbers.
-  They are encoded with the least significant digit first,
-  but because they are written right-to-left like Arabic letters,
-  the most significant digit is displayed on the left
-  as with other numbers.  So a direct conversion of 12345 to
-  Western Arabic digits as provided by <code>number->numeral</code>
-  would appear as <code>&#x661;&#x662;&#x663;&#x664;&#x665;</code>
-  and be read as 54321.</p>
-
 <h2 id="implementation">Implementation</h2>
 
 The sample implementation is found in the repository of this SRFI.
