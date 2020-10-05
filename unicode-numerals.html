@@ -9,7 +9,7 @@
   <body>
     <h1><a href="https://srfi.schemers.org/"><img class="srfi-logo" src="https://srfi.schemers.org/srfi-logo.svg" alt="SRFI logo" /></a>###: Unicode Numerals</h1>
 
-<p>by John Cowan (text) and ??? (implementation)</p>
+<p>by John Cowan (text) and Arvydas Silanskas (implementation)</p>
 
 <h2 id="status">Status</h2>
 
@@ -48,7 +48,7 @@ thus <code>(digit-value #\5 #\०) =&gt; #\५</code>, which is Devanagari digit
 This SRFI allows numbers of arbitrary types
 to be converted to use any digit set.</p>
 <p>No support is provided for bases other than 10,
-because such bases are rarely used with any other digit set,
+because such bases are rarely used with any non-European digit set,
 and because it is unclear what characters should be used
 to represent digits greater than 9.
 Likewise, there is no support for numerals that are not positional,
@@ -77,6 +77,17 @@ and numeric value equal to 0.</p>
 <pre><code>(number-&gt;numeral 3.1415 #\x9E6) =&gt; "৩.১৪১৫"    ; BENGALI DIGIT ZERO
 (numeral-&gt;number "๓๕๕/๑๑๓" #\xE50) =&gt; 355/113   ; THAI DIGIT ZERO
 </code></pre>
+    
+<p>Note: Numbers composed from Western Arabic digits
+  (<code>#x660</code> to <code>#x669</code> inclusive)
+  are represented differently from other decimal numbers.
+  They are encoded with the least significant digit first,
+  but because they are written right-to-left like Arabic letters,
+  the most significant digit is displayed on the left
+  as with other numbers.  So a direct conversion of 12345 to
+  Western Arabic digits as provided by <code>number->numeral</code>
+  would appear as <code>&#x661;&#x662;&#x663;&#x664;&#x665;</code>
+  and be read as 54321.</p>
 
 <h2 id="implementation">Implementation</h2>
 
@@ -88,7 +99,7 @@ Thanks to the Unicode Consortium, who made this SRFI possible,
 and to the participants on the SRFI mailing list.
 
 <h2 id="copyright">Copyright</h2>
-<p>&copy; 2020 John Cowan and ???.</p>.
+<p>&copy; 2020 John Cowan and Arvydas Silanskas.</p>.
 
 <p>
   Permission is hereby granted, free of charge, to any person
