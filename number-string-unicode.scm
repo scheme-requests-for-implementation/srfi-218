@@ -1,11 +1,11 @@
 (define-library
   (number-string-unicode)
 
-  (import 
+  (import
     (scheme base)
     (scheme char)
     (scheme case-lambda))
-  (export 
+  (export
     numeral->number
     number->numeral)
 

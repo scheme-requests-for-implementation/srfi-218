@@ -34,7 +34,7 @@ used with either the various Indic scripts or the Arabic script.
 The digits that are
 used instead are functionally identical, but their shape is different,
 and each one has a different set of digit characters in Unicode.
-For example, the number 12345 is written as 
+For example, the number 12345 is written as
 <code>&#x6F1;&#x6F2;&#x6F3;&#x6F4;&#x6F5;</code>
 in Eastern Arabic digits
 (used with Persian, Urdu, and other languages),
@@ -81,7 +81,7 @@ and numeric value equal to 0.</p>
 <pre><code>(number-&gt;numeral 3.1415 #\x9E6) =&gt; "৩.১৪১৫"    ; BENGALI DIGIT ZERO
 (numeral-&gt;number "๓๕๕/๑๑๓" #\xE50) =&gt; 355/113   ; THAI DIGIT ZERO
 </code></pre>
-    
+
 <h2 id="implementation">Implementation</h2>
 
 The sample implementation is found in the repository of this SRFI.
