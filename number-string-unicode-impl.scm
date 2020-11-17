@@ -19,7 +19,7 @@
   (define digit-right-type?
     (and digit
          (equal? char (integer->char (+ digit zero-code)))))
-  (cond 
+  (cond
     ((and digit digit-right-type?)
      (integer->char (+ digit ascii-zero-code)))
     ;; return rubbish char when received
@@ -38,7 +38,7 @@
     ;; also check third and fourth letters
     ((or (equal? #\i (string-ref str 1))
          (equal? #\e (string-ref str 1)))
-     (cond 
+     (cond
        ((< (string-length str) 4) #f)
        ((not (equal? #\# (string-ref str 2))) #f)
        ((equal? #\d (string-ref str 3)) #f)
