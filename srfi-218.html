@@ -20,8 +20,6 @@ using any set of Unicode digits that support positional notation.</p>
 
 <h2 id="issues">Issues</h2>
 
-<ul>
-  <li><code>digit-value</code> takes only one argument in R7RS Small.</li></ul>
 
 <h2 id="rationale">Rationale</h2>
 
@@ -44,12 +42,12 @@ and १२३४५ in Devanagari digits (used with Hindi and other languages).<
 non-European digits to be used in identifiers,
 there is very little support for using them in numbers.
 The <code>digit-value</code> procedure allows converting
-a single character between <code>#\0</code> and <code>#\9</code> to its
-equivalent in another digit set by specifying the 0 digit:
-thus <code>(digit-value #\5 #\०) =&gt; #\५</code>, which is Devanagari digit 5.
-(The 0 digit can be specified as <code>#\x966</code> instead.)
+a single decimal digit character to its numeric value:
+thus <code>(digit-value #\५)</code> =&gt; 5,
+because ५ is Devanagari digit 5.
+(The digit can be specified as <code>#\x096B</code> instead.)
 This SRFI allows numbers of arbitrary types
-to be converted to use any digit set.</p>
+to be converted from and to any digit set.</p>
 <p>No support is provided for bases other than 10,
 because such bases are rarely used with any non-European digit set,
 and because it is unclear what characters should be used
