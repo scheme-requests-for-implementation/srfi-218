@@ -1,0 +1,20 @@
+* SRFI 218: Unicode Numerals
+
+** by John Cowan (text) and Arvydas Silanskas (implementation)
+
+
+
+keywords: [[https://srfi.schemers.org/?keywords=internationalization][Internationalization]]
+
+This repository hosts [[https://srfi.schemers.org/srfi-218/][SRFI 218]]: Unicode Numerals, a [[https://srfi.schemers.org/][Scheme Request for Implementation]].
+
+This SRFI is in /draft/ status.
+
+The full documentation for this SRFI can be found in the [[https://srfi.schemers.org/srfi-218/srfi-218.html][SRFI Document]].
+
+If you'd like to participate in the discussion of this SRFI, or report issues with it, please [[https://srfi.schemers.org/srfi-218/][join the SRFI-218 mailing list]] and send your message there.
+
+Thank you.
+
+
+[[mailto:srfi-editors@srfi.schemers.org][The SRFI Editors]]
